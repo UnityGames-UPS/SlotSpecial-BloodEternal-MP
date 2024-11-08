@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4be2c9e0289604b9db66e01e235b9c4b
+guid: cd83c2109906441859fd487a04f2d154
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,34 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backgrounds_0
+      name: candles_1
       rect:
         serializedVersion: 2
-        x: 253
-        y: 0
-        width: 2011
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dedefee690a4d4210b261af8d0286da1
-      internalID: -637151619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: backgrounds_1
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 1047
-        width: 2015
-        height: 33
+        x: 29
+        y: 21
+        width: 389
+        height: 609
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,29 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecce54fecf8864632a868a2aa4eb64f3
-      internalID: -1609431190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: backgrounds_2
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 0
-        width: 2011
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93a151e084f434ec18443933afe20b96
-      internalID: 1874003794
+      spriteID: 76ca92a4ad3d7495f9daf02d804cd451
+      internalID: 1402497602
       vertices: []
       indices: 
       edges: []
@@ -196,9 +154,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      backgrounds_0: -637151619
-      backgrounds_1: -1609431190
-      backgrounds_2: 1874003794
+      candles_0: -24051792
+      candles_1: 1402497602
+      candles_2: -1863749746
+      candles_3: 826456564
+      candles_4: 1682448998
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
