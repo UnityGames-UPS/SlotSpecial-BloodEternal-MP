@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
             initiated = true;
             betCounter = 0;
             currentTotalBet = socketController.socketModel.initGameData.Bets[betCounter] * socketController.socketModel.initGameData.lineData.Count;
-
+            currentBalance=socketController.socketModel.playerData.Balance;
             if (totalBet_text) totalBet_text.text = currentTotalBet.ToString();
             if (betPerLine_text) betPerLine_text.text = socketController.socketModel.initGameData.Bets[betCounter].ToString();
             PayLineCOntroller.paylines = socketController.socketModel.initGameData.lineData;
@@ -325,6 +325,7 @@ public class GameManager : MonoBehaviour
         uIManager.ClosePopup();
         return true;
 
+
     }
 
     IEnumerator OnSpin()
@@ -334,6 +335,7 @@ public class GameManager : MonoBehaviour
         if (audioController) audioController.PlaySpinAudio();
         yield return new WaitUntil(() => socketController.isResultdone);
         slotManager.PopulateSLotMatrix(socketController.socketModel.resultGameData.ResultReel);
+        currentBalance = socketController.socketModel.playerData.Balance;
         float[] delay = new float[] { 0, 0 };
         if (!turboMode)
         {
@@ -357,7 +359,7 @@ public class GameManager : MonoBehaviour
 
         slotManager.DeActivateReelBorder();
 
-        currentBalance = socketController.socketModel.playerData.Balance;
+        
         if (isFreeSpin)
         {
             for (int i = 0; i < VHcomboList.Count; i++)
@@ -589,14 +591,14 @@ public class GameManager : MonoBehaviour
         socketController.SendData("message", gambleResData);
         yield return new WaitUntil(() => socketController.isResultdone);
         currentBalance = socketController.socketModel.gambleData.balance;
-        PlayerData playerData = new PlayerData();
-        playerData.currentWining = socketController.socketModel.gambleData.currentWinning;
-        playerData.Balance = socketController.socketModel.gambleData.balance;
+        // PlayerData playerData = new PlayerData();
+        socketController.socketModel.playerData.currentWining = socketController.socketModel.gambleData.currentWinning;
+        socketController.socketModel.playerData.Balance = socketController.socketModel.gambleData.balance;
         // Debug.Log("balance "+JsonConvert.SerializeObject(socketController.socketModel.gambleData));
         // Debug.Log("player "+JsonConvert.SerializeObject(socketController.socketModel));
         gambleChance = 0;
         Double_Button.interactable = false;
-        uIManager.UpdatePlayerInfo(playerData);
+        uIManager.UpdatePlayerInfo(socketController.socketModel.playerData);
         gambleObject.SetActive(false);
         ToggleGambleBtnGrp(true);
 
