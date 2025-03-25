@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Slot-BloodEternal.sln"
+    "dotnet.defaultSolution": "SlotSG-BloodEternal.sln"
 }
