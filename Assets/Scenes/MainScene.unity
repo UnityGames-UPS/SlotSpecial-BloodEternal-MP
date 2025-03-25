@@ -10915,6 +10915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isResultdone: 0
+  JSManager: {fileID: 1742353843}
   TestToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5MmQxNzA4ZDZlOGE0YjZiZWQxNCIsInVzZXJuYW1lIjoic2F5YW4iLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzM4NTcxNzU0LCJleHAiOjE3MzkxNzY1NTR9.2sIShj1iSwsUJGLxVOHxHmX62RAXLclJfoJWik4jw_g
 --- !u!1 &503935038
 GameObject:
@@ -18685,6 +18686,7 @@ MonoBehaviour:
   winIterationCount: 0
   freeSpinCount: 0
   VHcomboList: []
+  JSManager: {fileID: 1742353843}
   turboMode: 0
 --- !u!4 &830221915
 Transform:
@@ -40322,6 +40324,50 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1742353842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742353844}
+  - component: {fileID: 1742353843}
+  m_Layer: 0
+  m_Name: JS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1742353843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742353842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d64cd54d2c24d8399fd6ba2438cca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1742353844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742353842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3956964, y: -0.5899797, z: 5.778503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1746840428
 GameObject:
   m_ObjectHideFlags: 0
@@ -50674,3 +50720,4 @@ SceneRoots:
   - {fileID: 2046803209}
   - {fileID: 830221915}
   - {fileID: 4326194446140345616}
+  - {fileID: 1742353844}

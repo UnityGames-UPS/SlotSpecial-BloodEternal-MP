@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int freeSpinCount;
 
     [SerializeField] private List<ImageAnimation> VHcomboList;
+    [SerializeField] internal JSFunctCalls JSManager;
 
     [SerializeField] private bool turboMode;
 
@@ -193,7 +194,9 @@ public class GameManager : MonoBehaviour
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
             OnCustomAutoSpin(true, autoOptions[autoSpinCounter]);
-            Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
+#if UNITY_WEBGL && !UNITY_EDITOR
+            JSManager.SendCustomMessage("OnEnter");
+#endif
         }
         else
         {
@@ -201,10 +204,7 @@ public class GameManager : MonoBehaviour
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
         }
-
-
     }
-
 
     void ExecuteSpin() => StartCoroutine(SpinRoutine());
 
