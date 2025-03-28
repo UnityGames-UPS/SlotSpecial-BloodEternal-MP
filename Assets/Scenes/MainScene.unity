@@ -697,21 +697,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PRESS THE DOUBLE UP BUTTON AFTER ANY STANDARD WINS To GAMBLE YOUR WINNINGS.
+  m_text: 'PRESS THE Gamble BUTTON AFTER ANY STANDARD WINS To GAMBLE YOUR WINNINGS.
 
-    DOUBLE
-    UP IS UNAVAILABLE AFTER FREE SPINS FEATURE.
+    GAMBLE
+    50% OR ALL, YOUR WINNINGS.
 
-    GAMBLE 50% OR ALL, YOUR WINNINGS.
+    SELECT GAMBLE ALL OR GAMBLE 50% AND THEN BET
+    BY PRESSINS HEADS OR TAILS.
 
-    SELECT
-    GAMBLE ALL OR GAMBLE 50% AND THEN BET BY PRESSINS HEADS OR TAILS.
+    THE COIN WILL SPIN AND IF YOUR GUESS WAS CORRECT
+    YOU WILL win.
 
-    THE COIN
-    WILL SPIN AND IF YOUR GUESS WAS CORRECT YOU WILL DOUBLE YOUR STAKE.
-
-    PRESS
-    COLLECT TO COLLECT YOUR WINNINGS AND RETURN TO THE GAME
+    PRESS COLLECT TO COLLECT YOUR WINNINGS AND RETURN TO THE GAME
 
 '
   m_isRightToLeft: 0
@@ -1490,8 +1487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.17, y: 20.25}
-  m_SizeDelta: {x: 123.12, y: 30.02}
+  m_AnchoredPosition: {x: -1.8125, y: 23.369986}
+  m_SizeDelta: {x: 117.62, y: 36.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69738317
 MonoBehaviour:
@@ -1540,13 +1537,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 32.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 35
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -6670,8 +6667,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Your Account  balance is low. Please recharge.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
-  m_sharedMaterial: {fileID: -1749907445262273213, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7755e0e4d86374595837082012f927ca, type: 2}
+  m_sharedMaterial: {fileID: 3328470924528299338, guid: 7755e0e4d86374595837082012f927ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6701,7 +6698,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 37.2
-  m_fontStyle: 16
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -10918,7 +10915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isResultdone: 0
-  TestToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDgzY2U1YTI3YmY5MDI0NDNlYjRjMCIsInVzZXJuYW1lIjoic2F5YW4iLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzM1ODg2OTEzLCJleHAiOjE3MzY0OTE3MTN9.Slbmd8Ip4dW4Dbv2O33rbEbJ3xvulXyOMm_5Nit5Kw0
+  JSManager: {fileID: 1742353843}
+  TestToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5MmQxNzA4ZDZlOGE0YjZiZWQxNCIsInVzZXJuYW1lIjoic2F5YW4iLCJyb2xlIjoicGxheWVyIiwiaWF0IjoxNzM4NTcxNzU0LCJleHAiOjE3MzkxNzY1NTR9.2sIShj1iSwsUJGLxVOHxHmX62RAXLclJfoJWik4jw_g
 --- !u!1 &503935038
 GameObject:
   m_ObjectHideFlags: 0
@@ -12721,7 +12719,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 41.47}
-  m_SizeDelta: {x: 964.11, y: 207.7}
+  m_SizeDelta: {x: 707.75, y: 207.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566482088
 MonoBehaviour:
@@ -12745,8 +12743,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Unable to connect to the server.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
-  m_sharedMaterial: {fileID: -1749907445262273213, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7755e0e4d86374595837082012f927ca, type: 2}
+  m_sharedMaterial: {fileID: 3328470924528299338, guid: 7755e0e4d86374595837082012f927ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12776,7 +12774,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 42
-  m_fontStyle: 16
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -13008,8 +13006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6088, y: 24.92}
-  m_SizeDelta: {x: 178.14, y: 35.95}
+  m_AnchoredPosition: {x: -1.6094, y: 25.2}
+  m_SizeDelta: {x: 178.14, y: 36.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576684260
 MonoBehaviour:
@@ -13058,13 +13056,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.15
+  m_fontSize: 32.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -18688,6 +18686,7 @@ MonoBehaviour:
   winIterationCount: 0
   freeSpinCount: 0
   VHcomboList: []
+  JSManager: {fileID: 1742353843}
   turboMode: 0
 --- !u!4 &830221915
 Transform:
@@ -27500,7 +27499,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4.99, y: 0}
-  m_SizeDelta: {x: 294.62, y: 130.01}
+  m_SizeDelta: {x: 294.62, y: 114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229463026
 MonoBehaviour:
@@ -27522,7 +27521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Low Blance
+  m_text: 'Low Balance
 
 '
   m_isRightToLeft: 0
@@ -40325,6 +40324,50 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1742353842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742353844}
+  - component: {fileID: 1742353843}
+  m_Layer: 0
+  m_Name: JS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1742353843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742353842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d64cd54d2c24d8399fd6ba2438cca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1742353844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742353842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3956964, y: -0.5899797, z: 5.778503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1746840428
 GameObject:
   m_ObjectHideFlags: 0
@@ -40600,7 +40643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Double game
+  m_text: Gamble
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7755e0e4d86374595837082012f927ca, type: 2}
   m_sharedMaterial: {fileID: 3328470924528299338, guid: 7755e0e4d86374595837082012f927ca, type: 2}
@@ -40736,8 +40779,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DO you really want to Quit?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
-  m_sharedMaterial: {fileID: -1749907445262273213, guid: 801d6e4f64c8d472c8e01f2c619c29e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7755e0e4d86374595837082012f927ca, type: 2}
+  m_sharedMaterial: {fileID: 3328470924528299338, guid: 7755e0e4d86374595837082012f927ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40767,7 +40810,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 55
-  m_fontStyle: 16
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -50677,3 +50720,4 @@ SceneRoots:
   - {fileID: 2046803209}
   - {fileID: 830221915}
   - {fileID: 4326194446140345616}
+  - {fileID: 1742353844}

@@ -92,7 +92,7 @@ public class SlotController : MonoBehaviour
         DeActivateReelBorder();
         for (int i = 0; i < Slot_Transform.Length; i++)
         {
-
+            //for glow aniamtion in 2nd reel
             if (delay1 > 0 && i == 2 && !isFreeSpin && !GameManager.immediateStop)
             {
                 ActivateReelBorder("red");
@@ -100,6 +100,7 @@ public class SlotController : MonoBehaviour
                 yield return new WaitForSeconds(delay1);
             }
 
+            //for glow aniamtion in 5th reel
             if (delay2 > 0 && i == 4 && !isFreeSpin && !GameManager.immediateStop)
             {
                 playReelGlowSound?.Invoke(false);

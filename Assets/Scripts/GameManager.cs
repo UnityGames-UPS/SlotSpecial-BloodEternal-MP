@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int freeSpinCount;
 
     [SerializeField] private List<ImageAnimation> VHcomboList;
+    [SerializeField] internal JSFunctCalls JSManager;
 
     [SerializeField] private bool turboMode;
 
@@ -94,8 +95,8 @@ public class GameManager : MonoBehaviour
         SetButton(SlotStart_Button, ExecuteSpin, true);
         SetButton(AutoSpin_Button, () =>
         {
-            ExecuteAutoSpin();
             uIManager.ClosePopup();
+            ExecuteAutoSpin();
         }, true);
         SetButton(AutoSpinStop_Button, () => StartCoroutine(StopAutoSpinCoroutine()));
         // SetButton(BetPlus_Button, () => OnBetChange(true));
@@ -124,7 +125,7 @@ public class GameManager : MonoBehaviour
         {
             eventID = EventTriggerType.Select
         };
-        entry.callback.AddListener((eventData) => {CalculateCost(autoOptions[autoSpinCounter]);  Debug.Log("sdsds");});
+        entry.callback.AddListener((eventData) => { CalculateCost(autoOptions[autoSpinCounter]); Debug.Log("sdsds"); });
         trigger.triggers.Add(entry);
 
 
@@ -186,10 +187,16 @@ public class GameManager : MonoBehaviour
             PayLineCOntroller.paylines = socketController.socketModel.initGameData.lineData;
             uIManager.UpdatePlayerInfo(socketController.socketModel.playerData);
             uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData);
+            if (currentBalance < currentTotalBet && !isFreeSpin)
+            {
+                uIManager.LowBalPopup();
+            }
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
-            OnCustomAutoSpin(true,autoOptions[autoSpinCounter]);
-            Application.ExternalCall("window.parent.postMessage", "OnEnter", "*");
+            OnCustomAutoSpin(true, autoOptions[autoSpinCounter]);
+#if UNITY_WEBGL && !UNITY_EDITOR
+            JSManager.SendCustomMessage("OnEnter");
+#endif
         }
         else
         {
@@ -197,10 +204,7 @@ public class GameManager : MonoBehaviour
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
         }
-
-
     }
-
 
     void ExecuteSpin() => StartCoroutine(SpinRoutine());
 
@@ -229,13 +233,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void OnCustomAutoSpin(bool inc, int value=0)
+    void OnCustomAutoSpin(bool inc, int value = 0)
     {
-        if(value>0){
-            AutoSpinValue=value;
-                    AUtoSpinCountText.text = AutoSpinValue.ToString();
-        CalculateCost(AutoSpinValue);
-        return;
+        if (value > 0)
+        {
+            AutoSpinValue = value;
+            AUtoSpinCountText.text = AutoSpinValue.ToString();
+            CalculateCost(AutoSpinValue);
+            return;
         }
 
         if (inc)
@@ -400,7 +405,6 @@ public class GameManager : MonoBehaviour
     }
     bool OnSpinStart()
     {
-
         isSpinning = true;
         winIterationCount = 0;
         slotManager.OnlyChangeParent();
@@ -422,8 +426,6 @@ public class GameManager : MonoBehaviour
             gameStateText.text = $"Press Spin to Play";
         uIManager.ClosePopup();
         return true;
-
-
     }
 
     IEnumerator OnSpin()
@@ -441,6 +443,7 @@ public class GameManager : MonoBehaviour
         currentBalance = socketController.socketModel.playerData.Balance;
         float[] delay = new float[] { 0, 0 };
 
+        // delay for 2nd and 4th slot glow
         delay = slotManager.CalculateDelay(socketController.socketModel.resultGameData.ResultReel);
         if (turboMode)
         {
@@ -468,9 +471,11 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < VHcomboList.Count; i++)
             {
                 VHcomboList[i].StopAnimation();
+                //if combo list is not empty then start vampire hunter animation with the combo list
                 VHcomboList[i].StartAnimation();
             }
             yield return new WaitForSeconds(1f);
+            //show wild and blood animation
             slotManager.ShowWildAndBloodANimation(socketController.socketModel.resultGameData.bloodSplash, turboMode);
             if (turboMode)
                 yield return new WaitForSeconds(0.7f);
@@ -489,16 +494,12 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.6f);
             slotManager.StopIconBlastAnimation();
             yield return new WaitForSeconds(0.1f);
-
         }
-
-
-
         if (socketController.socketModel.playerData.currentWining > 0)
         {
             winAnimation = true;
             CheckWinPopups(socketController.socketModel.playerData.currentWining);
-            gameStateText.text = $"you Won: {socketController.socketModel.playerData.currentWining} ";
+            gameStateText.text = $"you Won: {socketController.socketModel.playerData.currentWining.ToString("f3")} ";
             StartCoroutine(uIManager.WinTextAnim(socketController.socketModel.playerData.currentWining));
             yield return new WaitUntil(() => !winAnimation);
         }
@@ -581,10 +582,13 @@ public class GameManager : MonoBehaviour
         freeSpinCount = socketController.socketModel.resultGameData.count;
 
         slotManager.disableIconsPanel.SetActive(false);
+        // shake animation before combining icons
         slotManager.IconShakeAnim(VHPos);
         yield return new WaitForSeconds(1f);
+        // white blast animation before combining icons
         slotManager.StartIconBlastAnimation(VHPos, true);
         yield return new WaitForSeconds(0.15f);
+        //check which icons to combine and setactive those icons
         slotManager.FreeSpinVHAnim(VHPos, ref VHcomboList);
         yield return new WaitForSeconds(1f);
         uIManager.FreeSpinPopup(freeSpinCount - prevFreeSpins);
@@ -644,14 +648,15 @@ public class GameManager : MonoBehaviour
         }
         if (socketController.socketModel.gambleData.coin == "HEAD")
         {
+            //if head then change the coin image to head
             coinAnim.textureArray.RemoveAt(0);
             coinAnim.textureArray.Insert(0, headImage);
         }
         else if (socketController.socketModel.gambleData.coin == "TAIL")
         {
+            //if tail then change the coin image to tail
             coinAnim.textureArray.RemoveAt(0);
             coinAnim.textureArray.Insert(0, tailImage);
-
         }
         coinAnim.StopAnimation();
         audioController.StopSpinAudio();
@@ -663,11 +668,13 @@ public class GameManager : MonoBehaviour
 
         bank = socketController.socketModel.gambleData.currentWinning;
 
+        // for gambling half of the amount
         if (gambleOption == "HALF")
         {
             uIManager.UpdategambleInfo(bank, true);
             if (!socketController.socketModel.gambleData.playerWon && socketController.socketModel.gambleData.currentWinning > 0)
             {
+                // if continues to lose upto gamble chance consicutively then collect the amount
                 gambleChance--;
                 if (gambleChance <= 0)
                 {
@@ -681,7 +688,7 @@ public class GameManager : MonoBehaviour
         }
         else
             uIManager.UpdategambleInfo(bank);
-
+        //if balance is less than 0 then collect the amount
         if (bank <= 0)
         {
             yield return new WaitForSeconds(1);
@@ -714,6 +721,7 @@ public class GameManager : MonoBehaviour
         gambleObject.SetActive(false);
         ToggleGambleBtnGrp(true);
         Debug.Log("autoSpinLeft" + autoSpinLeft);
+        //start autospin if autospin is left
         if (autoSpinLeft > 0)
         {
 
@@ -791,8 +799,8 @@ public class GameManager : MonoBehaviour
         if (betPerLine_text) betPerLine_text.text = socketController.socketModel.initGameData.Bets[betCounter].ToString();
         currentTotalBet = socketController.socketModel.initGameData.Bets[betCounter] * socketController.socketModel.initGameData.lineData.Count;
         if (totalBet_text) totalBet_text.text = currentTotalBet.ToString();
-        if (currentBalance < currentTotalBet)
-            uIManager.LowBalPopup();
+        // if (currentBalance < currentTotalBet)
+        //     uIManager.LowBalPopup();
     }
 
     private void MaxBet()
@@ -805,8 +813,8 @@ public class GameManager : MonoBehaviour
         totalBet_text.text = currentTotalBet.ToString();
         betPerLine_text.text = socketController.socketModel.initGameData.Bets[betCounter].ToString();
 
-        if (currentBalance < currentTotalBet)
-            uIManager.LowBalPopup();
+        // if (currentBalance < currentTotalBet)
+        //     uIManager.LowBalPopup();
     }
 
 
@@ -848,7 +856,7 @@ public class GameManager : MonoBehaviour
 
     private void CalculateCost(int noOfSpins)
     {
-        Debug.Log("no of spins"+noOfSpins);
+        Debug.Log("no of spins" + noOfSpins);
         if (noOfSpins > 0)
             AutoSpinValue = noOfSpins;
 
