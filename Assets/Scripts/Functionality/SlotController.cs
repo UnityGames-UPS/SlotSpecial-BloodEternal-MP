@@ -53,10 +53,10 @@ public class SlotController : MonoBehaviour
         for (int i = 0; i < Slot_Transform.Length; i++)
         {
             InitializeTweening(Slot_Transform[i], turboMode);
-            if(!GameManager.immediateStop)
-            yield return new WaitForSeconds(0.1f);
+            if (!GameManager.immediateStop)
+                yield return new WaitForSeconds(0.1f);
         }
-        if(GameManager.immediateStop)
+        if (GameManager.immediateStop)
             yield return new WaitForSeconds(0.35f);
 
 
@@ -137,9 +137,9 @@ public class SlotController : MonoBehaviour
 
         for (int i = 0; i < resultData.Count; i++)
         {
-            if (resultData[i][1] == 11)
+            if (resultData[i][1] == 12)
                 delay[0] = 1f;
-            else if (resultData[i][3] == 13)
+            else if (resultData[i][3] == 14)
                 delay[1] = 1f;
 
         }
@@ -163,13 +163,13 @@ public class SlotController : MonoBehaviour
 
 
 
-    internal void StartIconBlastAnimation(List<string> iconPos, bool opposite = false)
+    internal void StartIconBlastAnimation(List<int> pos, bool opposite = false)
     {
         // IconController tempIcon; 
-        for (int j = 0; j < iconPos.Count; j++)
+        for (int j = 0; j < pos.Count; j++)
         {
             SlotIconView tempIcon;
-            int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+            // int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
             if (opposite)
                 tempIcon = slotMatrix[pos[1]].slotImages[pos[0]];
             else
@@ -186,6 +186,72 @@ public class SlotController : MonoBehaviour
                 animatedIcons.Add(tempIcon);
         }
 
+    }
+    internal void StartIconBlastAnimation(List<List<int>> pos, bool opposite = false)
+    {
+        // IconController tempIcon; 
+        for (int j = 0; j < pos.Count; j++)
+        {
+            SlotIconView tempIcon;
+            // int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+
+            if (opposite)
+                tempIcon = slotMatrix[pos[j][1]].slotImages[pos[j][0]];
+            else
+                tempIcon = slotMatrix[pos[j][0]].slotImages[pos[j][1]];
+
+            tempIcon.blastAnim.SetActive(true);
+            tempIcon.blastAnim.transform.DOScale(new Vector2(1.1f, 1.1f), 0.35f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                tempIcon.blastAnim.SetActive(false);
+                tempIcon.frontBorder.SetActive(true);
+            });
+            tempIcon.transform.SetParent(disableIconsPanel.transform.parent);
+            if (!animatedIcons.Any(icon => icon.pos == tempIcon.pos))
+                animatedIcons.Add(tempIcon);
+        }
+
+    }
+    internal void StartIconBlastAnimation(List<string> iconPos, bool opposite = false)
+    {
+        // IconController tempIcon; 
+        for (int j = 0; j < iconPos.Count; j++)
+        {
+            Debug.Log("Dev Test1: " + iconPos[j]);
+            SlotIconView tempIcon;
+            int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+            Debug.Log("Dev Test: " + pos[0] + " :  " + pos[1]);
+            if (opposite)
+                tempIcon = slotMatrix[pos[1]].slotImages[pos[0]];
+            else
+                tempIcon = slotMatrix[pos[0]].slotImages[pos[1]];
+
+            tempIcon.blastAnim.SetActive(true);
+            tempIcon.blastAnim.transform.DOScale(new Vector2(1.1f, 1.1f), 0.35f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                tempIcon.blastAnim.SetActive(false);
+                tempIcon.frontBorder.SetActive(true);
+            });
+            tempIcon.transform.SetParent(disableIconsPanel.transform.parent);
+            if (!animatedIcons.Any(icon => icon.pos == tempIcon.pos))
+                animatedIcons.Add(tempIcon);
+        }
+
+    }
+
+    internal void ShowOnlyIcons(List<List<int>> pos, bool activateFrontBorder = false)
+    {
+
+        for (int j = 0; j < pos.Count; j++)
+        {
+            // int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+            SlotIconView tempIcon = slotMatrix[pos[j][0]].slotImages[pos[j][1]];
+            if (activateFrontBorder)
+                tempIcon.frontBorder.SetActive(true);
+            tempIcon.transform.SetParent(disableIconsPanel.transform.parent);
+            if (!animatedIcons.Any(icon => icon.pos == tempIcon.pos))
+                animatedIcons.Add(tempIcon);
+        }
     }
 
     internal void ShowOnlyIcons(List<string> iconPos, bool activateFrontBorder = false)
@@ -216,12 +282,12 @@ public class SlotController : MonoBehaviour
         }
         // animatedIcons.Clear();
     }
-    internal void StartIconAnimation(List<string> iconPos)
+    internal void StartIconAnimation(List<int> pos)
     {
         SlotIconView tempIcon = null;
-        for (int j = 0; j < iconPos.Count; j++)
+        for (int j = 0; j < pos.Count; j++)
         {
-            int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+            //int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
             tempIcon = slotMatrix[pos[0]].slotImages[pos[1]];
             tempIcon.frontBorder.SetActive(true);
             tempIcon.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f, 0, 0.3f);

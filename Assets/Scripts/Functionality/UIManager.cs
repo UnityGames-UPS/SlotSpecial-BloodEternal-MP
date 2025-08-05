@@ -74,6 +74,9 @@ public class UIManager : MonoBehaviour
     [Header("disconnection popup")]
     [SerializeField] private GameObject DisconnectPopup_Object;
     [SerializeField] private Button CloseDisconnect_Button;
+    [Header("Reconection Popup")]
+    [SerializeField]
+    private GameObject ReconectingPopup_Object;
 
     [Header("Quit Popup")]
     [SerializeField] private GameObject QuitPopupObject;
@@ -101,8 +104,9 @@ public class UIManager : MonoBehaviour
 
     [Header("player texts")]
     [SerializeField] private TMP_Text playerCurrentWinning;
-    [SerializeField] private TMP_Text playerBalance;
+    [SerializeField] internal TMP_Text playerBalance;
 
+    [SerializeField] internal GameObject RaycastBlocker;
     private GameObject currentPopup;
 
     internal Action<bool, string> ToggleAudio;
@@ -200,10 +204,12 @@ public class UIManager : MonoBehaviour
     }
 
 
-    internal void UpdatePlayerInfo(PlayerData playerData)
+    internal void UpdatePlayerInfo(Player playerData, double resultData)
     {
-        playerCurrentWinning.text = playerData.currentWining.ToString("f3");
-        playerBalance.text = playerData.Balance.ToString("f3");
+
+        playerCurrentWinning.text = resultData.ToString("f3");
+
+        playerBalance.text = playerData.balance.ToString("f3");
 
     }
 
@@ -238,42 +244,59 @@ public class UIManager : MonoBehaviour
         OpenPopup(ADPopup_Object);
     }
 
-    internal void PopulateSymbolsPayout(UIData uIData)
+    internal void PopulateSymbolsPayout(UiData uIData)
     {
         string text = "";
         for (int i = 0; i < SymbolsText.Length; i++)
         {
             text = "";
-            for (int j = 0; j < uIData.symbols[i].Multiplier.Count; j++)
+            for (int j = 0; j < uIData.paylines.symbols[i].multiplier.Count; j++)
             {
-                text += $"{6 - j}x - {uIData.symbols[i].Multiplier[j][0]} \n";
+                text += $"{6 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
             }
             SymbolsText[i].text = text;
         }
 
         text = "";
-        for (int i = 0; i < uIData.wildMultiplier.Count; i++)
+        // for (int i = 0; i < uIData.wildMultiplier.Count; i++)
+        // {
+        //     text += $"{i + 3}x - {uIData.wildMultiplier[i]} \n";
+        // }
+        // Wild_Text.text = text;
+
+        // text = "";
+        // string multiplierRow = "";
+        // string valueRow = "";
+
+        // for (int i = 0; i < uIData.BatsMultiplier.Count; i++)
+        // {
+        //     if (uIData.BatsMultiplier[i] == 0)
+        //         continue;
+        //     multiplierRow += $"X{uIData.BatsMultiplier.Count - i}\t";
+        //     valueRow += $"{uIData.BatsMultiplier[i]}\t";
+        // }
+
+        // Bat_Text.text = multiplierRow + "\n" + valueRow;
+
+
+
+    }
+
+    internal void ReconnectionPopup()
+    {
+        OpenPopup(ReconectingPopup_Object);
+    }
+    internal void CheckAndClosePopups()
+    {
+
+        if (ReconectingPopup_Object.activeInHierarchy)
         {
-            text += $"{i + 3}x - {uIData.wildMultiplier[i]} \n";
+            ClosePopup(ReconectingPopup_Object);
         }
-        Wild_Text.text = text;
-
-        text = "";
-        string multiplierRow = "";
-        string valueRow = "";
-
-        for (int i = 0; i < uIData.BatsMultiplier.Count; i++)
+        if (DisconnectPopup_Object.activeInHierarchy)
         {
-            if (uIData.BatsMultiplier[i] == 0)
-                continue;
-            multiplierRow += $"X{uIData.BatsMultiplier.Count - i}\t";
-            valueRow += $"{uIData.BatsMultiplier[i]}\t";
+            ClosePopup(DisconnectPopup_Object);
         }
-
-        Bat_Text.text = multiplierRow + "\n" + valueRow;
-
-
-
     }
 
     private void CallOnExitFunction()
@@ -295,7 +318,16 @@ public class UIManager : MonoBehaviour
         currentPopup = Popup;
         // paytableList[CurrentIndex].SetActive(true);
     }
+    private void ClosePopup(GameObject Popup)
+    {
 
+
+        if (Popup) Popup.SetActive(false);
+        if (!DisconnectPopup_Object.activeSelf)
+        {
+            if (MainPopup_Object) MainPopup_Object.SetActive(false);
+        }
+    }
     internal void ClosePopup()
     {
         if (!DisconnectPopup_Object.activeSelf)
