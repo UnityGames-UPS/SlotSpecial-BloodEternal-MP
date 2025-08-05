@@ -543,6 +543,7 @@ public class GameManager : MonoBehaviour
 
 
         audioController.StopWLAaudio();
+        slotManager.StopIconAnimation();
 
     }
 

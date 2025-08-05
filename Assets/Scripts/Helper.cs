@@ -69,6 +69,7 @@ public class Helper : MonoBehaviour
     internal static List<string> getAllVal(Substitutions substitutions)
     {
         List<string> res = new List<string>();
+        res.Clear();
         foreach (var obj in substitutions.bloodSplash)
         {
             res.Add(obj.index);
