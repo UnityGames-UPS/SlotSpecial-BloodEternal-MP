@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
             PayLineCOntroller.paylines = socketController.socketModel.initGameData.lines;
             // uIManager.UpdatePlayerInfo(socketController.socketModel.playerData);
             uIManager.playerBalance.text = socketController.socketModel.playerData.balance.ToString();
-            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData);
+            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers);
             if (currentBalance < currentTotalBet && !isFreeSpin)
             {
                 uIManager.LowBalPopup();
@@ -201,13 +201,14 @@ public class GameManager : MonoBehaviour
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
             OnCustomAutoSpin(true, autoOptions[autoSpinCounter]);
+            uIManager.RaycastBlocker.SetActive(false);
 #if UNITY_WEBGL && !UNITY_EDITOR
             JSManager.SendCustomMessage("OnEnter");
 #endif
         }
         else
         {
-            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData);
+            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers);
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
         }
@@ -420,7 +421,7 @@ public class GameManager : MonoBehaviour
         if (iterativeRoutine != null)
             StopCoroutine(iterativeRoutine);
         slotManager.disableIconsPanel.SetActive(false);
-        Debug.Log(currentBalance + ".   " + currentTotalBet);
+        uIManager.playerCurrentWinning.text = "0.000";
         if (currentBalance < currentTotalBet && !isFreeSpin)
         {
             uIManager.LowBalPopup();
@@ -522,12 +523,12 @@ public class GameManager : MonoBehaviour
             gameStateText.text = $"better luck next time";
 
         }
-        Debug.Log("Dev Test1:   BAT. Man" + socketController.socketModel.resultGameData.payload.winAmount);
+        Debug.Log("Dev Test1:   BAT. Man" + socketController.socketModel.playerData.balance);
         uIManager.UpdatePlayerInfo(socketController.socketModel.playerData, socketController.socketModel.resultGameData.payload.winAmount);
 
         if (!isAutoSpin && !isFreeSpin && socketController.socketModel.resultGameData.payload.winAmount > 1 && !turboMode)
         {
-            iterativeRoutine = StartCoroutine(IterativeWinShowRoutine(Helper.GetSymbolToEmit(socketController.socketModel.resultGameData.payload, socketController.socketModel.initGameData)));
+            iterativeRoutine = StartCoroutine(IterativeWinShowRoutine(Helper.GetListOfSymbolToEmit(socketController.socketModel.resultGameData.payload, socketController.socketModel.initGameData)));
             // yield return iterativeRoutine;
 
         }
@@ -547,7 +548,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private IEnumerator IterativeWinShowRoutine(List<List<int>> symbolsToEmit)
+    private IEnumerator IterativeWinShowRoutine(List<List<string>> symbolsToEmit)
     {
         winIterationCount = maxIterationWinShow;
         while (winIterationCount > 0)
@@ -741,7 +742,9 @@ public class GameManager : MonoBehaviour
         // Debug.Log("player "+JsonConvert.SerializeObject(socketController.socketModel));
         gambleChance = 0;
         Double_Button.interactable = false;
-        uIManager.UpdatePlayerInfo(socketController.socketModel.playerData, socketController.socketModel.resultGameData.payload.currentWinning);
+        uIManager.UpdatePlayerInfo(socketController.socketModel.playerData, socketController.socketModel.gambleData.currentWinning);
+
+        gameStateText.text = $"you Won: {socketController.socketModel.gambleData.currentWinning.ToString("f3")} ";
 
         gambleObject.SetActive(false);
         ToggleGambleBtnGrp(true);

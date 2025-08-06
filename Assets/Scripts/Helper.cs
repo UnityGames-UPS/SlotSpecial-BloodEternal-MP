@@ -97,17 +97,24 @@ public class Helper : MonoBehaviour
             Debug.Log($"Testx [{i}]: {VHPos[i]}");
         }
     }
-    internal static List<List<int>> GetListOfSymbolToEmit(Payload payload, GameData gameData)
+    internal static List<List<string>> GetListOfSymbolToEmit(Payload payload, GameData gameData)
     {
-        List<List<int>> symbols = new List<List<int>>();
+        List<List<string>> symbols = new List<List<string>>();
         for (int i = 0; i < payload.lineWins.Count; i++)
         {
-            List<int> dummy = new List<int>();
-            for (int j = 0; j < payload.lineWins[i].positions.Count; j++)
+            int lineIndex = payload.lineWins[i].lineIndex;
+            List<int> positions = payload.lineWins[i].positions;
+            List<string> dummy = new List<string>();
+
+            for (int j = 0; j < positions.Count; j++)
             {
-                dummy.Add(gameData.lines[payload.lineWins[i].lineIndex][payload.lineWins[i].positions[j]]);
+                string x = j.ToString();
+                string y = gameData.lines[lineIndex][positions[j]].ToString();
+                string z = x + "," + y;
+                // Create a new list for each coordinate pair
+                dummy.Add(z);
             }
-            symbols.Add(gameData.lines[i]);
+            symbols.Add(dummy);
         }
 
         return symbols;

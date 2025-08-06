@@ -12,7 +12,7 @@ public class SocketModel
 
     public Player playerData;
     public UiData uIData;
-
+    public Features InitMultipliers;
     public GameData initGameData;
 
     public Root resultGameData;
@@ -75,6 +75,8 @@ public class Root
     public GameData gameData { get; set; }
     public UiData uiData { get; set; }
     public Player player { get; set; }
+    //public Features features { get; set; }
+
 
     public bool success { get; set; }
     public List<List<string>> matrix { get; set; }
@@ -127,6 +129,9 @@ public class Features
     public FreeSpin freeSpin { get; set; }
     public Bats bats { get; set; }
     public List<List<string>> winningSymbols { get; set; }
+
+    public List<double> batsMultiplier { get; set; }
+    public List<int> wildMultiplier { get; set; }
 }
 
 public class FreeSpin

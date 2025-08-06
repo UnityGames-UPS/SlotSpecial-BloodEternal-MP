@@ -217,10 +217,10 @@ public class SlotController : MonoBehaviour
         // IconController tempIcon; 
         for (int j = 0; j < iconPos.Count; j++)
         {
-            Debug.Log("Dev Test1: " + iconPos[j]);
+
             SlotIconView tempIcon;
             int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
-            Debug.Log("Dev Test: " + pos[0] + " :  " + pos[1]);
+
             if (opposite)
                 tempIcon = slotMatrix[pos[1]].slotImages[pos[0]];
             else
@@ -282,12 +282,12 @@ public class SlotController : MonoBehaviour
         }
         // animatedIcons.Clear();
     }
-    internal void StartIconAnimation(List<int> pos)
+    internal void StartIconAnimation(List<string> iconPos)
     {
         SlotIconView tempIcon = null;
-        for (int j = 0; j < pos.Count; j++)
+        for (int j = 0; j < iconPos.Count; j++)
         {
-            //int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
+            int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
             tempIcon = slotMatrix[pos[0]].slotImages[pos[1]];
             tempIcon.frontBorder.SetActive(true);
             tempIcon.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f, 0, 0.3f);

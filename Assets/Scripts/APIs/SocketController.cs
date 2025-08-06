@@ -318,6 +318,7 @@ public class SocketController : MonoBehaviour
 
     internal void CloseSocket()
     {
+        uiManager.RaycastBlocker.SetActive(false);
         SendData("EXIT");
 #if UNITY_WEBGL && !UNIFonTY_EDITOR
         JSManager.SendCustomMessage("onExit");
@@ -345,6 +346,7 @@ public class SocketController : MonoBehaviour
                 {
                     socketModel.initGameData = myData.gameData;
                     socketModel.uIData = myData.uiData;
+                    socketModel.InitMultipliers = myData.features;
                     socketModel.playerData = myData.player;
                     // socketModel.uIData.symbols = message["UIData"]["paylines"]["symbols"].ToObject<List<Symbol>>();
                     // socketModel.uIData.wildMultiplier = gameData["wildMultiplier"].ToObject<List<double>>();
@@ -360,7 +362,7 @@ public class SocketController : MonoBehaviour
             case "ResultData":
                 {
                     socketModel.resultGameData = myData;
-
+                    socketModel.playerData = myData.player;
                     Debug.Log("result data" + JsonConvert.SerializeObject(socketModel.resultGameData));
                     isResultdone = true;
                     break;

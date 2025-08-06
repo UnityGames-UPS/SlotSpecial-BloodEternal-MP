@@ -10911,7 +10911,7 @@ MonoBehaviour:
   isResultdone: 0
   JSManager: {fileID: 1742353843}
   TestSocketURI: http://localhost:5000/
-  TestToken: d35b407cbdae4df4979c5032e561c0b1
+  TestToken: aff95bca57ad484191c03c400c2aa200
 --- !u!1 &503935038
 GameObject:
   m_ObjectHideFlags: 0
@@ -34963,7 +34963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1497723515
 RectTransform:
   m_ObjectHideFlags: 0

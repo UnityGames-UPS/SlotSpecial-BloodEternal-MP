@@ -103,7 +103,7 @@ public class UIManager : MonoBehaviour
     private bool isExit = false;
 
     [Header("player texts")]
-    [SerializeField] private TMP_Text playerCurrentWinning;
+    [SerializeField] internal TMP_Text playerCurrentWinning;
     [SerializeField] internal TMP_Text playerBalance;
 
     [SerializeField] internal GameObject RaycastBlocker;
@@ -244,7 +244,7 @@ public class UIManager : MonoBehaviour
         OpenPopup(ADPopup_Object);
     }
 
-    internal void PopulateSymbolsPayout(UiData uIData)
+    internal void PopulateSymbolsPayout(UiData uIData, Features InitMultiplyer)
     {
         string text = "";
         for (int i = 0; i < SymbolsText.Length; i++)
@@ -252,31 +252,31 @@ public class UIManager : MonoBehaviour
             text = "";
             for (int j = 0; j < uIData.paylines.symbols[i].multiplier.Count; j++)
             {
-                text += $"{6 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
+                text += $"{3 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
             }
             SymbolsText[i].text = text;
         }
 
         text = "";
-        // for (int i = 0; i < uIData.wildMultiplier.Count; i++)
-        // {
-        //     text += $"{i + 3}x - {uIData.wildMultiplier[i]} \n";
-        // }
-        // Wild_Text.text = text;
+        for (int i = 0; i < InitMultiplyer.wildMultiplier.Count; i++)
+        {
+            text += $"{i + 3}x - {InitMultiplyer.wildMultiplier[i]} \n";
+        }
+        Wild_Text.text = text;
 
-        // text = "";
-        // string multiplierRow = "";
-        // string valueRow = "";
+        text = "";
+        string multiplierRow = "";
+        string valueRow = "";
 
-        // for (int i = 0; i < uIData.BatsMultiplier.Count; i++)
-        // {
-        //     if (uIData.BatsMultiplier[i] == 0)
-        //         continue;
-        //     multiplierRow += $"X{uIData.BatsMultiplier.Count - i}\t";
-        //     valueRow += $"{uIData.BatsMultiplier[i]}\t";
-        // }
+        for (int i = 0; i < InitMultiplyer.batsMultiplier.Count; i++)
+        {
+            if (InitMultiplyer.batsMultiplier[i] == 0)
+                continue;
+            multiplierRow += $"X{InitMultiplyer.batsMultiplier.Count - i}\t";
+            valueRow += $"{InitMultiplyer.batsMultiplier[i]}\t";
+        }
 
-        // Bat_Text.text = multiplierRow + "\n" + valueRow;
+        Bat_Text.text = multiplierRow + "\n" + valueRow;
 
 
 
