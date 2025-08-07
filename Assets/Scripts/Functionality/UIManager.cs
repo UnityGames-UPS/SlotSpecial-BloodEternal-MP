@@ -304,7 +304,7 @@ public class UIManager : MonoBehaviour
         isExit = true;
         OnExit?.Invoke();
         // audioController.PlayButtonAudio();
-        // socketManager.CloseSocket();
+        // Start socketManager.CloseSocket();
     }
 
     private void OpenPopup(GameObject Popup)

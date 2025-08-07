@@ -138,6 +138,34 @@ public class SocketController : MonoBehaviour
         // Proceed with connecting to the server
         SetupSocketManager(options);
     }
+
+    // internal void CloseSocket()
+    // {
+    //     uiManager.RaycastBlocker.SetActive(false);
+
+    // }
+
+
+    internal IEnumerator CloseSocket() //Back2 Start
+    {
+        uiManager.RaycastBlocker.SetActive(true);
+        ResetPingRoutine();
+        //  SendData("EXIT");
+
+        Debug.Log("Closing Socket");
+
+        manager?.Close();
+        manager = null;
+
+        Debug.Log("Waiting for socket to close");
+
+        yield return new WaitForSeconds(0.5f);
+
+        Debug.Log("Socket Closed");
+#if UNITY_WEBGL && !UNIFonTY_EDITOR
+        JSManager.SendCustomMessage("OnExit");
+#endif
+    }
     private void OnSocketState(bool state)
     {
         if (state)
@@ -316,14 +344,6 @@ public class SocketController : MonoBehaviour
         SendData(eventName, initmessage);
     }
 
-    internal void CloseSocket()
-    {
-        uiManager.RaycastBlocker.SetActive(false);
-        SendData("EXIT");
-#if UNITY_WEBGL && !UNIFonTY_EDITOR
-        JSManager.SendCustomMessage("onExit");
-#endif
-    }
 
     private void ParseResponse(string jsonObject)
     {
