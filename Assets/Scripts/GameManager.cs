@@ -405,7 +405,7 @@ public class GameManager : MonoBehaviour
             isSpinning = false;
             ToggleButtonGrp(true);
         }
-        if (socketController.socketModel.resultGameData.payload.winAmount > 0 && !isFreeSpin)
+        if (socketController.socketModel.resultGameData.payload.winAmount > 0 && !isFreeSpin && !isAutoSpin)
         {
             Double_Button.interactable = true;
         }

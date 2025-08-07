@@ -145,6 +145,11 @@ public class SocketController : MonoBehaviour
 
     // }
 
+    void CloseGame()
+    {
+        Debug.Log("Unity: Closing Game");
+        StartCoroutine(CloseSocket());
+    }
 
     internal IEnumerator CloseSocket() //Back2 Start
     {

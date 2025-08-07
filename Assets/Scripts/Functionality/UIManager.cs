@@ -252,7 +252,7 @@ public class UIManager : MonoBehaviour
             text = "";
             for (int j = 0; j < uIData.paylines.symbols[i].multiplier.Count; j++)
             {
-                text += $"{3 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
+                text += $"{6 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
             }
             SymbolsText[i].text = text;
         }
