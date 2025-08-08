@@ -407,7 +407,7 @@ public class SocketController : MonoBehaviour
             case "gambleCollect":
                 {
                     socketModel.playerData = myData.player;
-                    socketModel.gambleData.currentWinning = myData.payload.currentWinning;
+                    socketModel.gambleData.currentWinning = myData.payload.winAmount;
                     // socketModel.gambleData.currentWinning = message["currentWinning"].ToObject<double>();
                     // socketModel.gambleData.balance = message["balance"].ToObject<double>();
                     // Debug.Log("collect" + JsonConvert.SerializeObject(socketModel.gambleData));

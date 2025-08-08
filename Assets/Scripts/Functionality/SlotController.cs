@@ -287,6 +287,7 @@ public class SlotController : MonoBehaviour
         SlotIconView tempIcon = null;
         for (int j = 0; j < iconPos.Count; j++)
         {
+
             int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
             tempIcon = slotMatrix[pos[0]].slotImages[pos[1]];
             tempIcon.frontBorder.SetActive(true);
@@ -305,7 +306,7 @@ public class SlotController : MonoBehaviour
         {
             int[] pos = iconPos[j].Split(',').Select(int.Parse).ToArray();
             SlotIconView tempIcon = slotMatrix[pos[1]].slotImages[pos[0]];
-            tempIcon.bloodSplatter.transform.localScale *= 0;
+            tempIcon.bloodSplatter.transform.localScale = Vector3.zero;
             tempIcon.bloodSplatter.gameObject.SetActive(true);
             tempIcon.bloodSplatter.transform.DOScale(Vector3.one, turbo ? 0.3f : 0.5f).OnComplete(() =>
             {

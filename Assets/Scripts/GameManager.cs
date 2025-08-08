@@ -523,11 +523,12 @@ public class GameManager : MonoBehaviour
             gameStateText.text = $"better luck next time";
 
         }
-        Debug.Log("Dev Test1:   BAT. Man" + socketController.socketModel.playerData.balance);
+
         uIManager.UpdatePlayerInfo(socketController.socketModel.playerData, socketController.socketModel.resultGameData.payload.winAmount);
 
-        if (!isAutoSpin && !isFreeSpin && socketController.socketModel.resultGameData.payload.winAmount > 1 && !turboMode)
+        if (!isAutoSpin && !isFreeSpin && socketController.socketModel.resultGameData.payload.winAmount > 0 && !turboMode)
         {
+
             iterativeRoutine = StartCoroutine(IterativeWinShowRoutine(Helper.GetListOfSymbolToEmit(socketController.socketModel.resultGameData.payload, socketController.socketModel.initGameData)));
             // yield return iterativeRoutine;
 
@@ -569,7 +570,7 @@ public class GameManager : MonoBehaviour
                     slotManager.StopIconAnimation();
                     yield return new WaitForSeconds(0.1f);
                 }
-
+                Debug.Log("id" + symbolsToEmit[i]);
                 slotManager.StartIconAnimation(symbolsToEmit[i]);
 
                 PayLineCOntroller.GeneratePayline(socketController.socketModel.resultGameData.payload.lineWins[i].lineIndex);

@@ -55,7 +55,7 @@ public class Helper : MonoBehaviour
 
             for (int j = 0; j < positions.Count; j++)
             {
-                int x = j;
+                int x = positions[j];
                 int y = gameData.lines[lineIndex][positions[j]];
 
                 // Create a new list for each coordinate pair
@@ -108,13 +108,15 @@ public class Helper : MonoBehaviour
 
             for (int j = 0; j < positions.Count; j++)
             {
-                string x = j.ToString();
+                string x = positions[j].ToString();
                 string y = gameData.lines[lineIndex][positions[j]].ToString();
                 string z = x + "," + y;
                 // Create a new list for each coordinate pair
                 dummy.Add(z);
+
             }
             symbols.Add(dummy);
+            // Testx(symbols[i]);
         }
 
         return symbols;
