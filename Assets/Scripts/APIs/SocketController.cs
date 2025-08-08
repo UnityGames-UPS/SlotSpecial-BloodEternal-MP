@@ -404,12 +404,14 @@ public class SocketController : MonoBehaviour
 
                     break;
                 }
-            case "GambleCollect":
+            case "gambleCollect":
                 {
+                    socketModel.playerData = myData.player;
+                    socketModel.gambleData.currentWinning = myData.payload.currentWinning;
                     // socketModel.gambleData.currentWinning = message["currentWinning"].ToObject<double>();
                     // socketModel.gambleData.balance = message["balance"].ToObject<double>();
                     // Debug.Log("collect" + JsonConvert.SerializeObject(socketModel.gambleData));
-                    // isResultdone = true;
+                    isResultdone = true;
                     break;
                 }
             case "ExitUser":
@@ -453,7 +455,7 @@ public class SocketController : MonoBehaviour
 
 
     }
-    internal void GambleDraw(string selectedside, string gambleOption, int currBet)
+    internal void GambleDraw(string selectedside, string gambleOption, double currBet)
     {
         isResultdone = false;
         MessageData message = new MessageData();
@@ -463,6 +465,20 @@ public class SocketController : MonoBehaviour
         message.payload.selectedSide = selectedside;
         message.payload.lastWinning = currBet;
         message.payload.Event = "draw";
+        // Serialize message data to JSON
+        string json = JsonUtility.ToJson(message);
+        SendDataWithNamespace("request", json);
+    }
+    internal void GambleCollect()
+    {
+        isResultdone = false;
+        MessageData message = new MessageData();
+        message.payload = new SentDeta();
+        message.type = "GAMBLE";
+        // message.payload.gambleOption = gambleOption;
+        // message.payload.selectedSide = selectedside;
+        // message.payload.lastWinning = currBet;
+        message.payload.Event = "collect";
         // Serialize message data to JSON
         string json = JsonUtility.ToJson(message);
         SendDataWithNamespace("request", json);

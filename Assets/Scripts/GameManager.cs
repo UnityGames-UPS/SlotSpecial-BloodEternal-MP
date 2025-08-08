@@ -661,7 +661,7 @@ public class GameManager : MonoBehaviour
         coinAnim.StartAnimation();
         audioController.PlaySpinAudio("gamble");
         // object gambleResData = new { data = new { selected = type, gambleOption = gambleOption }, id = "GAMBLERESULT" };
-        socketController.GambleDraw(type, gambleOption, betCounter);
+        socketController.GambleDraw(type, gambleOption, socketController.socketModel.resultGameData.payload.winAmount);
         yield return new WaitUntil(() => socketController.isResultdone);
         if (turboMode)
         {
@@ -731,8 +731,8 @@ public class GameManager : MonoBehaviour
     {
         ToggleGambleBtnGrp(false);
         //  object gambleResData = new { data = new { }, id = "GAMBLECOLLECT" };
-        // socketController.SendData("message", gambleResData);
-        //  yield return new WaitUntil(() => socketController.isResultdone);
+        socketController.GambleCollect();
+        yield return new WaitUntil(() => socketController.isResultdone);
         currentBalance = socketController.socketModel.gambleData.balance;
         // PlayerData playerData = new PlayerData();
         socketController.socketModel.resultGameData.payload.winAmount = socketController.socketModel.gambleData.currentWinning;
