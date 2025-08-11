@@ -10911,7 +10911,7 @@ MonoBehaviour:
   isResultdone: 0
   JSManager: {fileID: 1742353843}
   TestSocketURI: http://localhost:5000/
-  TestToken: 7a517e54d1b8447b8d1479f13a9ba03b
+  TestToken: c07518b6a9cb4f4fbf3c3e4475a48223
 --- !u!1 &503935038
 GameObject:
   m_ObjectHideFlags: 0

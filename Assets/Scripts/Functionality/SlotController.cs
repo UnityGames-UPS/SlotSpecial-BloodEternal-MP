@@ -71,7 +71,7 @@ public class SlotController : MonoBehaviour
             {
 
                 slotMatrix[i].slotImages[j].iconImage.sprite = iconImages[resultData[j][i]];
-                if (resultData[j][i] == 11 || resultData[j][i] == 12 || resultData[j][i] == 13 || resultData[j][i] == 14)
+                if (resultData[j][i] == 15 || resultData[j][i] == 12 || resultData[j][i] == 13 || resultData[j][i] == 14)
                 {
                     slotMatrix[i].slotImages[j].bgGlow.gameObject.SetActive(true);
                     slotMatrix[i].slotImages[j].bgGlow.StartAnimation();
@@ -310,6 +310,7 @@ public class SlotController : MonoBehaviour
             tempIcon.bloodSplatter.gameObject.SetActive(true);
             tempIcon.bloodSplatter.transform.DOScale(Vector3.one, turbo ? 0.3f : 0.5f).OnComplete(() =>
             {
+                tempIcon.wildObject.transform.localScale = Vector3.one;
                 tempIcon.wildObject.SetActive(true);
                 tempIcon.wildObject.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), turbo ? 0.2f : 0.3f, 0, 0.3f);
             }).SetEase(Ease.OutExpo);

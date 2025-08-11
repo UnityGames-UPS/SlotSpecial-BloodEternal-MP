@@ -567,10 +567,10 @@ public class GameManager : MonoBehaviour
             {
                 if (i != 0)
                 {
-                    slotManager.StopIconAnimation();
-                    yield return new WaitForSeconds(0.1f);
                 }
-                Debug.Log("id" + symbolsToEmit[i]);
+                slotManager.StopIconAnimation();
+                yield return new WaitForSeconds(0.1f);
+
                 slotManager.StartIconAnimation(symbolsToEmit[i]);
 
                 PayLineCOntroller.GeneratePayline(socketController.socketModel.resultGameData.payload.lineWins[i].lineIndex);
