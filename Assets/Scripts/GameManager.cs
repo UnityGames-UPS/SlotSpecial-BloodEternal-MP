@@ -102,6 +102,8 @@ public class GameManager : MonoBehaviour
         SetButton(AutoSpin_Button, () =>
         {
             uIManager.ClosePopup();
+            currentTotalBet = socketController.socketModel.initGameData.bets[betCounter] * socketController.socketModel.initGameData.lines.Count;
+            if (totalBet_text) totalBet_text.text = currentTotalBet.ToString();
             ExecuteAutoSpin();
         }, true);
         SetButton(AutoSpinStop_Button, () => StartCoroutine(StopAutoSpinCoroutine()));
