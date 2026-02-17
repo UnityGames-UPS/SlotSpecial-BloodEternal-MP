@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviour
             PayLineCOntroller.paylines = socketController.socketModel.initGameData.lines;
             // uIManager.UpdatePlayerInfo(socketController.socketModel.playerData);
             uIManager.playerBalance.text = socketController.socketModel.playerData.balance.ToString();
-            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers);
+            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers, socketController.socketModel.initGameData.bets[betCounter]);
             if (currentBalance < currentTotalBet && !isFreeSpin)
             {
                 uIManager.LowBalPopup();
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers);
+            uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers, socketController.socketModel.initGameData.bets[betCounter]);
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
         }

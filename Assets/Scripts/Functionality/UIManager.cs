@@ -244,15 +244,17 @@ public class UIManager : MonoBehaviour
         OpenPopup(ADPopup_Object);
     }
 
-    internal void PopulateSymbolsPayout(UiData uIData, Features InitMultiplyer)
+    internal void PopulateSymbolsPayout(UiData uIData, Features InitMultiplyer, double currentBet)
     {
+
+
         string text = "";
         for (int i = 0; i < SymbolsText.Length; i++)
         {
             text = "";
             for (int j = 0; j < uIData.paylines.symbols[i].multiplier.Count; j++)
             {
-                text += $"{6 - j}x - {uIData.paylines.symbols[i].multiplier[j]} \n";
+                text += $"{6 - j}x - {uIData.paylines.symbols[i].multiplier[j] * currentBet} \n";
             }
             SymbolsText[i].text = text;
         }
@@ -260,7 +262,7 @@ public class UIManager : MonoBehaviour
         text = "";
         for (int i = 0; i < InitMultiplyer.wildMultiplier.Count; i++)
         {
-            text += $"{i + 3}x - {InitMultiplyer.wildMultiplier[i]} \n";
+            text += $"{i + 3}x - {InitMultiplyer.wildMultiplier[i] * currentBet} \n";
         }
         Wild_Text.text = text;
 
@@ -273,7 +275,7 @@ public class UIManager : MonoBehaviour
             if (InitMultiplyer.batsMultiplier[i] == 0)
                 continue;
             multiplierRow += $"X{InitMultiplyer.batsMultiplier.Count - i}\t";
-            valueRow += $"{InitMultiplyer.batsMultiplier[i]}\t";
+            valueRow += $"{InitMultiplyer.batsMultiplier[i] * currentBet}\t";
         }
 
         Bat_Text.text = multiplierRow + "\n" + valueRow;

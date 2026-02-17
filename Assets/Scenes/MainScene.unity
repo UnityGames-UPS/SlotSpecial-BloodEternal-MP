@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -218,20 +214,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -467,20 +466,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -749,20 +751,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -883,20 +888,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1224,7 +1232,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &59587332
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1238,6 +1246,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -1539,20 +1548,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2304,20 +2316,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2513,20 +2528,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2916,7 +2934,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &133709854
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2930,6 +2948,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -3188,20 +3207,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3750,20 +3772,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4109,20 +4134,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4587,7 +4615,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!95 &218043086
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4601,6 +4629,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -4905,20 +4934,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5172,20 +5204,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5335,7 +5370,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &235184921
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5349,6 +5384,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -5449,20 +5485,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6034,20 +6073,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6560,20 +6602,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6694,20 +6739,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -6939,20 +6987,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -7550,20 +7601,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -7891,20 +7945,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -8043,143 +8100,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents:
@@ -8377,20 +8434,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -8540,7 +8600,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &374088770
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8554,6 +8614,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -8962,20 +9023,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -9211,20 +9275,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -9626,20 +9693,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10390,7 +10460,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &457913148
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10404,6 +10474,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -10586,20 +10657,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10723,20 +10797,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -10857,20 +10934,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11058,8 +11138,8 @@ MonoBehaviour:
   uiManager: {fileID: 377874625}
   isResultdone: 0
   JSManager: {fileID: 1742353843}
-  TestSocketURI: http://localhost:5000/
-  TestToken: d6e44ed6db814da2a03324e433bb2fc2
+  TestSocketURI: https://devrealtime.dingdinghouse.com/
+  TestToken: 7c5cac08d1bb44048299d016eacb8873
 --- !u!1 &503935038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11287,20 +11367,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11513,20 +11596,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11647,20 +11733,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -11932,20 +12021,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -12024,7 +12116,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &541171380
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12038,6 +12130,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -12342,20 +12435,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -12724,7 +12820,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &559629347
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12738,6 +12834,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -12926,20 +13023,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13060,20 +13160,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13348,20 +13451,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13566,20 +13672,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -13973,20 +14082,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14199,20 +14311,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14459,20 +14574,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 15
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -14881,7 +14999,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &643299301
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14895,6 +15013,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -15169,20 +15288,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -15500,7 +15622,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!95 &657710939
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15514,6 +15636,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -15614,20 +15737,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -15795,20 +15921,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -16450,7 +16579,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &704341218
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16464,6 +16593,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -17435,20 +17565,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -17569,20 +17702,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -17703,20 +17839,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18104,20 +18243,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18276,20 +18418,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -18731,20 +18876,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -19603,20 +19751,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -20065,143 +20216,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents:
@@ -20513,20 +20664,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -20939,20 +21093,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -21073,20 +21230,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -21518,20 +21678,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -21658,20 +21821,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -21987,20 +22153,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -22197,20 +22366,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -22690,20 +22862,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -22824,20 +22999,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -22905,7 +23083,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1034102992
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22919,6 +23097,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -23303,20 +23482,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -23437,20 +23619,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -23571,20 +23756,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -23705,20 +23893,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -23786,7 +23977,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1064254705
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23800,6 +23991,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -23982,20 +24174,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -24116,20 +24311,23 @@ MonoBehaviour:
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -24451,20 +24649,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -24585,20 +24786,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -24723,20 +24927,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -24857,20 +25064,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -25066,20 +25276,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -25430,7 +25643,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1102894737
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -25444,6 +25657,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -25544,20 +25758,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -25678,20 +25895,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -26009,20 +26229,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -26526,7 +26749,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1150750059
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26540,6 +26763,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -26881,20 +27105,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -27131,20 +27358,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -27265,20 +27495,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -27399,20 +27632,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -27604,30 +27840,42 @@ MonoBehaviour:
   m_ItemText: {fileID: 203490925}
   m_ItemImage: {fileID: 0}
   m_Value: 0
+  m_MultiSelect: 0
   m_Options:
     m_Options:
     - m_Text: 1
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 2
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28216,20 +28464,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -28351,20 +28602,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -28629,7 +28883,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1237956806
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28643,6 +28897,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -28743,20 +28998,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -28860,7 +29118,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1245309298
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28874,6 +29132,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -29132,20 +29391,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 11.5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -29266,20 +29528,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -29476,20 +29741,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -29612,20 +29880,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -29861,20 +30132,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -29995,20 +30269,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -30237,30 +30514,42 @@ MonoBehaviour:
   m_ItemText: {fileID: 1051686476}
   m_ItemImage: {fileID: 0}
   m_Value: 0
+  m_MultiSelect: 0
   m_Options:
     m_Options:
     - m_Text: 1
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 2
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: 3
       m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30364,20 +30653,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -30777,7 +31069,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1312622147
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -30791,6 +31083,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -30973,20 +31266,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -31107,20 +31403,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 15
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -31247,20 +31546,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -31513,20 +31815,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -31784,20 +32089,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -31947,7 +32255,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!95 &1355622714
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -31961,6 +32269,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -32151,20 +32460,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -32901,20 +33213,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -33064,7 +33379,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1398599435
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -33078,6 +33393,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -33672,20 +33988,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 10
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -34306,20 +34625,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -35416,20 +35738,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -35909,20 +36234,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -36578,7 +36906,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1563929049
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -36592,6 +36920,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -36866,20 +37195,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -37121,20 +37453,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -37255,20 +37590,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -37389,20 +37727,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -38109,20 +38450,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -38243,20 +38587,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -38872,20 +39219,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -39246,20 +39596,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -39380,20 +39733,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -39517,20 +39873,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -39657,20 +40016,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -39791,20 +40153,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -40834,20 +41199,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -40997,7 +41365,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &1735313172
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41011,6 +41379,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -41284,20 +41653,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -41560,7 +41932,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1752670616
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41574,6 +41946,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -41756,20 +42129,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -41890,20 +42266,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -42513,20 +42892,23 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -42647,20 +43029,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -43064,143 +43449,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents:
@@ -43320,20 +43705,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -44113,20 +44501,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -44247,20 +44638,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -44456,20 +44850,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -44590,20 +44987,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -45006,20 +45406,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 10
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -45151,20 +45554,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -45232,7 +45638,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1925453872
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -45246,6 +45652,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -45507,20 +45914,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -45718,20 +46128,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -46137,20 +46550,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -46373,20 +46789,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -46597,20 +47016,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -46920,20 +47342,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -47054,20 +47479,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 10
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -47263,20 +47691,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -48106,7 +48537,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2047611984
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -48120,6 +48551,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -48249,7 +48681,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2054686483
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -48263,6 +48695,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -49194,20 +49627,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -49364,20 +49800,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -49615,20 +50054,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -49862,20 +50304,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -50368,143 +50813,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents: []
@@ -50981,143 +51426,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents: []
@@ -51360,7 +51805,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5d8bcac4aeef74003a7af25dbb03fdf2, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5d8bcac4aeef74003a7af25dbb03fdf2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -51808,6 +52254,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -51919,6 +52366,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -52015,6 +52463,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -52111,6 +52560,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1.5
@@ -52305,143 +52755,143 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[0]
+      propertyPath: 'textureArray.Array.data[0]'
       value: 
       objectReference: {fileID: 21300000, guid: ccdefd7ea41d04d65a6194c01ccec555, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[1]
+      propertyPath: 'textureArray.Array.data[1]'
       value: 
       objectReference: {fileID: 21300000, guid: d95cecb5ff95e4fb99f99abacff10ee6, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[2]
+      propertyPath: 'textureArray.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: 7bd6cced5c1884c4581404de70eb2381, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[3]
+      propertyPath: 'textureArray.Array.data[3]'
       value: 
       objectReference: {fileID: 21300000, guid: 13e9a42add0a140848f078411e108512, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[4]
+      propertyPath: 'textureArray.Array.data[4]'
       value: 
       objectReference: {fileID: 21300000, guid: 91825b51fb9904a40818c674d19bfaac, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[5]
+      propertyPath: 'textureArray.Array.data[5]'
       value: 
       objectReference: {fileID: 21300000, guid: d0bd0fa6192b14224aaa9f87258a0611, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[6]
+      propertyPath: 'textureArray.Array.data[6]'
       value: 
       objectReference: {fileID: 21300000, guid: 7c6e6d791a4f34549b3af1fa9ac41ef0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[7]
+      propertyPath: 'textureArray.Array.data[7]'
       value: 
       objectReference: {fileID: 21300000, guid: 404b0564db1334e888a7787e80c5a373, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[8]
+      propertyPath: 'textureArray.Array.data[8]'
       value: 
       objectReference: {fileID: 21300000, guid: e11984d8ec82e4d4ebbba6b03227bbd1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[9]
+      propertyPath: 'textureArray.Array.data[9]'
       value: 
       objectReference: {fileID: 21300000, guid: 207b0877c63d34bbd9e94eaa65535a0a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[10]
+      propertyPath: 'textureArray.Array.data[10]'
       value: 
       objectReference: {fileID: 21300000, guid: 7e4aad95ffc3545c99abf153a227651c, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[11]
+      propertyPath: 'textureArray.Array.data[11]'
       value: 
       objectReference: {fileID: 21300000, guid: 3b2ad2d59b01c40e6867654dad8c5126, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[12]
+      propertyPath: 'textureArray.Array.data[12]'
       value: 
       objectReference: {fileID: 21300000, guid: 4240d3c6a8b774a7689907d5deb3a2f1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[13]
+      propertyPath: 'textureArray.Array.data[13]'
       value: 
       objectReference: {fileID: 21300000, guid: 7acf92ba740eb4ed2b72b3f995ce6a2d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[14]
+      propertyPath: 'textureArray.Array.data[14]'
       value: 
       objectReference: {fileID: 21300000, guid: 3a2e5b8ee1e174c7fb3d05234501ea34, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[15]
+      propertyPath: 'textureArray.Array.data[15]'
       value: 
       objectReference: {fileID: 21300000, guid: 54d409bf8c20640cf8f29e2385f7c627, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[16]
+      propertyPath: 'textureArray.Array.data[16]'
       value: 
       objectReference: {fileID: 21300000, guid: b5a2c1f1e0a96446db7919baf1f7b50a, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[17]
+      propertyPath: 'textureArray.Array.data[17]'
       value: 
       objectReference: {fileID: 21300000, guid: 064874d4d22334db5adac966db9cbcf3, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[18]
+      propertyPath: 'textureArray.Array.data[18]'
       value: 
       objectReference: {fileID: 21300000, guid: 925c0d9136bed43d89576222e43eea68, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[19]
+      propertyPath: 'textureArray.Array.data[19]'
       value: 
       objectReference: {fileID: 21300000, guid: 96aa8e08bb0ae4a1388e775a8380eba1, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[20]
+      propertyPath: 'textureArray.Array.data[20]'
       value: 
       objectReference: {fileID: 21300000, guid: 18932fc2e1bde478eb4dbe928bf3238d, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[21]
+      propertyPath: 'textureArray.Array.data[21]'
       value: 
       objectReference: {fileID: 21300000, guid: 3e160c2d1bda54f50ba609f0142edd84, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[22]
+      propertyPath: 'textureArray.Array.data[22]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e28071fc9cbc40e9bdc0bf85944bcb2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[23]
+      propertyPath: 'textureArray.Array.data[23]'
       value: 
       objectReference: {fileID: 21300000, guid: 2e8e83f4588864e37bb2369a1719da24, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[24]
+      propertyPath: 'textureArray.Array.data[24]'
       value: 
       objectReference: {fileID: 21300000, guid: 2fc92975395f946339b17dcf7aeba665, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[25]
+      propertyPath: 'textureArray.Array.data[25]'
       value: 
       objectReference: {fileID: 21300000, guid: 9e2c1058f1b0d446b89f017ef9e6f686, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[26]
+      propertyPath: 'textureArray.Array.data[26]'
       value: 
       objectReference: {fileID: 21300000, guid: 502004fd61b8548b9bafdbcf9eb23ba2, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[27]
+      propertyPath: 'textureArray.Array.data[27]'
       value: 
       objectReference: {fileID: 21300000, guid: 1b476a922f7db4c33a7a4209cf54abb9, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[28]
+      propertyPath: 'textureArray.Array.data[28]'
       value: 
       objectReference: {fileID: 21300000, guid: 455c344abf5a142ebb377d00f1b3baf0, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[29]
+      propertyPath: 'textureArray.Array.data[29]'
       value: 
       objectReference: {fileID: 21300000, guid: e5f6671e3efd54a299a9d317bbf3b343, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[30]
+      propertyPath: 'textureArray.Array.data[30]'
       value: 
       objectReference: {fileID: 21300000, guid: 9f3ece05fa2da4c948d84900022d563b, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[31]
+      propertyPath: 'textureArray.Array.data[31]'
       value: 
       objectReference: {fileID: 21300000, guid: 2434b4a45c4ab4ac999b84fab7014426, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[32]
+      propertyPath: 'textureArray.Array.data[32]'
       value: 
       objectReference: {fileID: 21300000, guid: 3ba96c22eccc44458ac784739a9dfa74, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[33]
+      propertyPath: 'textureArray.Array.data[33]'
       value: 
       objectReference: {fileID: 21300000, guid: 2aa2cbfc2c2d9429eb6978d9bca49b46, type: 3}
     - target: {fileID: 8810448181036851652, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-      propertyPath: textureArray.Array.data[34]
+      propertyPath: 'textureArray.Array.data[34]'
       value: 
       objectReference: {fileID: 21300000, guid: e3d25451d5f0b416babc00ccc5ece757, type: 3}
     m_RemovedComponents: []
