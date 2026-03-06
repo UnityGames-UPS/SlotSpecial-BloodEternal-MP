@@ -46,7 +46,7 @@ public class SlotController : MonoBehaviour
     [SerializeField] internal List<SlotIconView> animatedIcons = new List<SlotIconView>();
 
     [SerializeField] internal List<List<int>> freezeIndex = new List<List<int>>();
-
+    internal int ActiveVHCount = 0;
     internal IEnumerator StartSpin(bool turboMode)
     {
 
@@ -387,6 +387,8 @@ public class SlotController : MonoBehaviour
             int[] iconPos = pos[i].Split(',').Select(int.Parse).ToArray();
             if (iconPos[1] == 1)
             {
+                ActiveVHCount++;
+
                 VHObjectsRed[iconPos[0]].gameObject.SetActive(true);
                 VHObjectsRed[iconPos[0]].StartAnimation();
                 VHObjectsRed[iconPos[0]].transform.DOPunchScale(new Vector3(0.4f, 0.4f, 0), 0.3f, 0, 1.2f);
@@ -394,6 +396,7 @@ public class SlotController : MonoBehaviour
             }
             else if (iconPos[1] == 3)
             {
+                ActiveVHCount++;
                 VHObjectsBlue[iconPos[0]].gameObject.SetActive(true);
                 VHObjectsBlue[iconPos[0]].StartAnimation();
                 VHObjectsBlue[iconPos[0]].transform.DOPunchScale(new Vector3(0.4f, 0.4f, 0), 0.3f, 0, 1.2f);
@@ -404,7 +407,54 @@ public class SlotController : MonoBehaviour
         }
 
     }
+    internal void CheckForVH(List<string> pos)
+    {
+        HashSet<int> activeRed = new HashSet<int>();
+        HashSet<int> activeBlue = new HashSet<int>();
 
+
+        for (int i = 0; i < pos.Count; i++)
+        {
+            if (i % 2 != 0) continue;
+
+            int[] iconPos = pos[i].Split(',').Select(int.Parse).ToArray();
+
+            int index = iconPos[0];
+            int type = iconPos[1];
+
+            if (type == 1)
+            {
+                activeRed.Add(index);
+
+            }
+            else if (type == 3)
+            {
+                activeBlue.Add(index);
+
+            }
+        }
+
+
+
+        for (int i = 0; i < VHObjectsRed.Length; i++)
+        {
+            if (!activeRed.Contains(i))
+            {
+                VHObjectsRed[i].gameObject.SetActive(false);
+                VHObjectsRed[i].StopAnimation();
+            }
+        }
+
+
+        for (int i = 0; i < VHObjectsBlue.Length; i++)
+        {
+            if (!activeBlue.Contains(i))
+            {
+                VHObjectsBlue[i].gameObject.SetActive(false);
+                VHObjectsBlue[i].StopAnimation();
+            }
+        }
+    }
     internal void IconShakeAnim(List<string> vhPos)
     {
         int[] pos;

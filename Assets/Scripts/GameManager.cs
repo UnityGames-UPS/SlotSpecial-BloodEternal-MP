@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
     internal static bool winAnimation;
     internal static bool immediateStop;
     private int autoSpinLeft = 0;
+
+
     void Awake()
     {
 
@@ -297,6 +299,9 @@ public class GameManager : MonoBehaviour
         while (freeSpinCount > 0)
         {
             freeSpinCount--;
+            List<String> VHPos = Helper.GetSingleString(socketController.socketModel.resultGameData.features.freeSpin.substitutions.vampHuman);
+            SetaVHFalse(VHPos);
+            slotManager.ActiveVHCount = VHPos.Count;
             yield return SpinRoutine();
             yield return new WaitForSeconds(1);
         }
@@ -618,6 +623,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         //check which icons to combine and setactive those icons
         slotManager.FreeSpinVHAnim(VHPos, ref VHcomboList);
+
         yield return new WaitForSeconds(1f);
         uIManager.FreeSpinPopup(freeSpinCount - prevFreeSpins);
         yield return new WaitForSeconds(1.5f);
@@ -631,6 +637,17 @@ public class GameManager : MonoBehaviour
         {
             VHcomboList[i].StopAnimation();
             VHcomboList[i].gameObject.SetActive(false);
+        }
+    }
+
+    void SetaVHFalse(List<string> pos)
+    {
+        if (pos.Count < slotManager.ActiveVHCount)
+        {
+
+            slotManager.CheckForVH(pos);
+            slotManager.ActiveVHCount = pos.Count;
+
         }
     }
     void OnInitGamble()
