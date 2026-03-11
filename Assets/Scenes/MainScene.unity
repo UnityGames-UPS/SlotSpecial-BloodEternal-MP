@@ -10978,7 +10978,7 @@ MonoBehaviour:
   isResultdone: 0
   JSManager: {fileID: 1742353843}
   TestSocketURI: https://devrealtime.dingdinghouse.com/
-  TestToken: 7254ffa285924a94b222d4b2fb25a470
+  TestToken: 399f13c63422456fbe89ad72dd8c2718
 --- !u!1 &503935038
 GameObject:
   m_ObjectHideFlags: 0

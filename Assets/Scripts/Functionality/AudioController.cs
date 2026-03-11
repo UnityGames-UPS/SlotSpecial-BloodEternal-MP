@@ -26,7 +26,7 @@ public class AudioController : MonoBehaviour
 
     private void Awake()
     {
-        reelGlow_Sound.clip=ReelGlow_audio;
+        reelGlow_Sound.clip = ReelGlow_audio;
         playBgAudio();
 
         //if (bg_adudio) bg_adudio.Play();
@@ -50,12 +50,12 @@ public class AudioController : MonoBehaviour
 
     }
 
-    internal void PlaySpinAudio(string type="default")
+    internal void PlaySpinAudio(string type = "default")
     {
-        if(type=="gamble")
-        audioPlayer_Spin.clip = GambleSpinClip;
+        if (type == "gamble")
+            audioPlayer_Spin.clip = GambleSpinClip;
         else
-        audioPlayer_Spin.clip = SpinClip;
+            audioPlayer_Spin.clip = SpinClip;
 
         audioPlayer_Spin.Play();
 
@@ -134,11 +134,12 @@ public class AudioController : MonoBehaviour
 
     }
 
-    internal void ReelGlowSound(bool play){
-        if(play)
-        reelGlow_Sound.Play();
+    internal void ReelGlowSound(bool play)
+    {
+        if (play)
+            reelGlow_Sound.Play();
         else
-        reelGlow_Sound.Stop();
+            reelGlow_Sound.Stop();
 
     }
 
@@ -179,6 +180,7 @@ public class AudioController : MonoBehaviour
                 audioPlayer_button.mute = toggle;
                 audioPlayer_Spin.mute = toggle;
                 audioPlayer_wl.mute = toggle;
+                reelGlow_Sound.mute = toggle;
                 break;
 
 
