@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
 
         slotManager.shuffleInitialMatrix();
         socketController.OnInit = InitGame;
+        socketController.OnBalanceSync = HandleBalanceSync;
         uIManager.ToggleAudio = audioController.ToggleMute;
         uIManager.playButtonAudio = audioController.PlayButtonAudio;
         uIManager.OnExit = () => StartCoroutine(socketController.CloseSocket());
@@ -215,6 +216,16 @@ public class GameManager : MonoBehaviour
             uIManager.PopulateSymbolsPayout(socketController.socketModel.uIData, socketController.socketModel.InitMultipliers, socketController.socketModel.initGameData.bets[betCounter]);
             PopulateAutoSpinDropDown();
             PopulateBetPerlineDropDown();
+        }
+    }
+
+    private void HandleBalanceSync(double newBalance)
+    {
+        currentBalance = newBalance;
+        uIManager.playerBalance.text = newBalance.ToString("f3");
+        if (currentBalance < currentTotalBet && !isFreeSpin)
+        {
+            uIManager.LowBalPopup();
         }
     }
 

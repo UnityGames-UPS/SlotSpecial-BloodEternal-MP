@@ -114,11 +114,27 @@ public class UIManager : MonoBehaviour
 
     internal Action OnExit;
 
+    [Header("Focus / visibility")]
+    [SerializeField] private JSFunctCalls jsFunctCalls;
+    [SerializeField] private AudioController audioController;
+    [SerializeField] private SocketController socketController;
+
     private void Awake()
     {
         //if (spalsh_screen) spalsh_screen.SetActive(true);
         //StartCoroutine(LoadingRoutine());
         SimulateClickByDefault();
+
+        if (jsFunctCalls != null)
+            jsFunctCalls.RegisterVisibilityListener(gameObject.name);
+    }
+
+    public void OnFocusChanged(string value)
+    {
+        bool focused = value == "1";
+        Debug.Log("UNITY FOCUS CHANGED: " + value + " (focused: " + focused + ")");
+        audioController?.SetMuteAll(!focused);
+        socketController?.HandleFocusChange(focused);
     }
 
     private void SimulateClickByDefault()

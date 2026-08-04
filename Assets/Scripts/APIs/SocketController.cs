@@ -43,6 +43,7 @@ public class SocketController : MonoBehaviour
 
     internal Action OnInit;
     internal Action ShowDisconnectionPopup;
+    internal Action<double> OnBalanceSync;
 
 
     private bool isConnected = false; //Back2 Start
@@ -57,6 +58,13 @@ public class SocketController : MonoBehaviour
     private int missedPongs = 0;
     private const int MaxMissedPongs = 5;
     private Coroutine PingRoutine; //Back2 end
+
+    private bool hasFocus = true;
+    private float focusLostTime = 0f;
+    private Coroutine focusCheckRoutine;
+    private const float maxBackgroundTime = 60f;
+    private bool isExiting = false;
+    private bool isBeingDestroyed = false;
 
 
     private void Awake()
@@ -153,6 +161,7 @@ public class SocketController : MonoBehaviour
 
     internal IEnumerator CloseSocket() //Back2 Start
     {
+        isExiting = true;
         uiManager.RaycastBlocker.SetActive(true);
         ResetPingRoutine();
         //  SendData("EXIT");
@@ -167,9 +176,61 @@ public class SocketController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         Debug.Log("Socket Closed");
-#if UNITY_WEBGL && !UNIFonTY_EDITOR
+#if UNITY_WEBGL && !UNITY_EDITOR
         JSManager.SendCustomMessage("OnExit");
 #endif
+    }
+
+    private void OnDestroy()
+    {
+        isBeingDestroyed = true;
+    }
+
+    internal void HandleFocusChange(bool focus)
+    {
+        hasFocus = focus;
+
+        if (!focus)
+        {
+            focusLostTime = Time.time;
+            if (focusCheckRoutine == null && !isExiting && !isBeingDestroyed)
+                focusCheckRoutine = StartCoroutine(FocusTimeoutCheck());
+        }
+        else
+        {
+            if (focusCheckRoutine != null)
+            {
+                StopCoroutine(focusCheckRoutine);
+                focusCheckRoutine = null;
+            }
+        }
+    }
+
+    private IEnumerator FocusTimeoutCheck()
+    {
+        while (!hasFocus && !isExiting && !isBeingDestroyed)
+        {
+            if (Time.time - focusLostTime >= maxBackgroundTime)
+            {
+                Debug.LogWarning("[SOCKET] Background timeout — closing connection");
+                isConnected = false;
+                ResetPingRoutine();
+
+                if (manager != null)
+                {
+                    try { manager.Close(); }
+                    catch (Exception e) { Debug.LogWarning($"[SOCKET] Focus close error: {e.Message}"); }
+                }
+
+                uiManager.DisconnectionPopup();
+                focusCheckRoutine = null;
+                yield break;
+            }
+
+            yield return new WaitForSecondsRealtime(1f);
+        }
+
+        focusCheckRoutine = null;
     }
     private void OnSocketState(bool state)
     {
@@ -241,12 +302,9 @@ public class SocketController : MonoBehaviour
     } //Back2 end
     private void OnPongReceived(string data) //Back2 Start
     {
-        Debug.Log("✅ Received pong from server.");
         waitingForPong = false;
         missedPongs = 0;
         lastPongTime = Time.time;
-        Debug.Log($"⏱️ Updated last pong time: {lastPongTime}");
-        Debug.Log($"📦 Pong payload: {data}");
     } //Back2 end
 
     private void SendPing() //Back2 Start
@@ -267,8 +325,6 @@ public class SocketController : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log($"🟡 PingCheck | waitingForPong: {waitingForPong}, missedPongs: {missedPongs}, timeSinceLastPong: {Time.time - lastPongTime}");
-
             if (missedPongs == 0)
             {
                 uiManager.CheckAndClosePopups();
@@ -296,7 +352,6 @@ public class SocketController : MonoBehaviour
             // Send next ping
             waitingForPong = true;
             lastPongTime = Time.time;
-            Debug.Log("📤 Sending ping...");
             SendData("ping");
             yield return new WaitForSeconds(pingInterval);
         }
@@ -353,7 +408,17 @@ public class SocketController : MonoBehaviour
         gameSocket.On<string>("alert", OnSocketAlert);
         gameSocket.On<string>("pong", OnPongReceived); //Back2 Start
         gameSocket.On<string>("AnotherDevice", OnSocketOtherDevice);
+        gameSocket.On<string>("balance:sync", HandleBalanceSync);
         manager.Open();
+    }
+
+    private void HandleBalanceSync(string data)
+    {
+        BalanceSyncPayload syncPayload = JsonConvert.DeserializeObject<BalanceSyncPayload>(data);
+        if (syncPayload == null) return;
+
+        socketModel.playerData.balance = syncPayload.balance;
+        OnBalanceSync?.Invoke(syncPayload.balance);
     }
 
     // Connected event handler implementation

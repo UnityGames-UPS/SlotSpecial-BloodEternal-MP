@@ -48,6 +48,12 @@ public class Player
     public double balance { get; set; }
 }
 
+[Serializable]
+public class BalanceSyncPayload
+{
+    public double balance;
+}
+
 public class ReelsInstance
 {
     [JsonProperty("0")]
