@@ -1,2 +1,0 @@
-#Blood Eternal
-Dev Branch
