@@ -106,6 +106,7 @@ public class SocketController : MonoBehaviour
 
 
 #if UNITY_WEBGL && !UNITY_EDITOR
+        JSManager.RegisterAuthTokenListener(gameObject.name); // listen for host's TokenReceived before asking
         JSManager.SendCustomMessage("authToken");
         StartCoroutine(WaitForAuthToken(options));
 #else
@@ -503,7 +504,7 @@ public class SocketController : MonoBehaviour
                         this.manager.Close();
                     }
 #if UNITY_WEBGL && !UNITY_EDITOR
-                    JSManager.SendCustomMessage("onExit");
+                    JSManager.SendCustomMessage("OnExit"); // was "onExit" — host matches "OnExit"
 #endif
                     break;
                 }
